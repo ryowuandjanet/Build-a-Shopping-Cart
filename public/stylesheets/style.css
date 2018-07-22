@@ -13,6 +13,16 @@ a {
 
 .thumbnail .description{
 	color:#7f7f7f;
+	width: 150px;
+
+    /* 第一步：先禁止斷行 */
+    white-space: nowrap;
+    
+    /* 第二步：超過部份隱藏 */
+    overflow: hidden;
+    
+    /* 第三部：表示文字溢出時，顯示省略符號(...) */
+    text-overflow: ellipsis;
 }
 
 .price{
