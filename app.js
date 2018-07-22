@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-mongoose.connect('mongodb://ryowu:leo140814@ds245901.mlab.com:45901/shopping0722')
+mongoose.connect('mongodb://0.0.0.0:27017/shopping',{ useNewUrlParser: true })
 // view engine setup
 app.engine('.hbs',expressHandlebars({defaultLayout: 'layout',extname:'.hbs'}));
 app.set('view engine', '.hbs');
