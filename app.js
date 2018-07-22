@@ -4,11 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressHandlebars=require('express-handlebars');
+var mongoose=require('mongoose');
 
 var indexRouter = require('./routes/index');
 
 var app = express();
 
+mongoose.connect('mongodb://ryowu:leo140814@ds245901.mlab.com:45901/shopping0722')
 // view engine setup
 app.engine('.hbs',expressHandlebars({defaultLayout: 'layout',extname:'.hbs'}));
 app.set('view engine', '.hbs');
